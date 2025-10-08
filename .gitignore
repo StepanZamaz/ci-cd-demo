@@ -1,0 +1,8 @@
+/.idea/.gitignore
+/.idea/ci-cd-demo.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.npmrc
+/package-lock.json
+/node_modules/

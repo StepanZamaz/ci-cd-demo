@@ -1,0 +1,20 @@
+{
+  "name": "simple-ci-cd-api",
+  "version": "1.0.0",
+  "description": "Simple API to demonstrate CI/CD with GitHub Actions and Vercel",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --runInBand",
+    "build": "echo 'Building project...' && mkdir -p dist && cp -r src dist && echo 'Build complete!'",
+    "uu-safe-install": "npx uu-safe-install"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
+  }
+}
