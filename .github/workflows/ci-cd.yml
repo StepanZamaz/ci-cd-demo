@@ -55,17 +55,9 @@ jobs:
           name: build
           path: .
 
-      - name: Inspect folder structure
-        run: ls -R
-
-      - name: Recreate dist folder
-        run: |
-          mkdir dist
-          mv server.js dist/
-
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: vercel deploy --prod --token $VERCEL_TOKEN --confirm --scope $VERCEL_ORG_ID --cwd dist
+        run: vercel deploy --prod --token $VERCEL_TOKEN --confirm --scope $VERCEL_ORG_ID
