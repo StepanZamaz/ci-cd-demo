@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-    res.json({ message: "Hello from CI/CD API 🚀" });
+    res.json({ message: "Hello from CI/CD API 🚀 test1" });
 });
 
 if (process.env.NODE_ENV !== "test") {
