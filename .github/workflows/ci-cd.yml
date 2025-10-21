@@ -43,19 +43,17 @@ jobs:
     environment: production
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: build
           path: .
+
       - name: Inspect folder structure
         run: ls -R
-
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Install Vercel CLI
-        run: npm install -g vercel
 
       - name: Recreate dist folder
         run: |
