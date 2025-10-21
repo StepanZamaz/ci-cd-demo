@@ -57,6 +57,11 @@ jobs:
       - name: Install Vercel CLI
         run: npm install -g vercel
 
+      - name: Recreate dist folder
+        run: |
+          mkdir dist
+          mv server.js dist/
+
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
