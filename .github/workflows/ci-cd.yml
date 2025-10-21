@@ -48,6 +48,8 @@ jobs:
         with:
           name: build
           path: .
+      - name: Inspect folder structure
+        run: ls -R
 
       - name: Checkout code
         uses: actions/checkout@v4
